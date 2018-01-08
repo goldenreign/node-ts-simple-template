@@ -15,7 +15,7 @@ npm run dev
 
 Structure:
 
-```shell
+```plaintext
 .
 ├── dist   - application bundle (single JS)
 ├── export - exported application (JS + package.json)
@@ -37,4 +37,4 @@ Scripts:
 
 `npm run clean` - clean `out` folder
 
-`npm run fresh` - remove generated (including `node_modules` and `package-lock.json`)
+`npm run fresh` - remove generated files and folders (including `node_modules` and `package-lock.json`)
