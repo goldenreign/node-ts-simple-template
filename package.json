@@ -1,0 +1,32 @@
+{
+  "name": "node-ts-simple-template",
+  "version": "1.0.0",
+  "description": "Simple Node.js + TypeScript project template",
+  "main": "out/app.js",
+  "scripts": {
+    "prestart": "npm i --production",
+    "start": "node out/app.js",
+    "predev": "npm run build",
+    "dev": "node out/app.js",
+    "preexport": "npm run clean && npm run build",
+    "export": "shx rm -rf export && shx mkdir -p export/out && shx cp -r out package.json export",
+    "prebundle": "npm run clean && npm run build",
+    "bundle": "shx rm -rf dist && shx mkdir dist && browserify --node out/app.js > dist/app-bundle.js",
+    "clean": "shx rm -rf out",
+    "build": "tsc",
+    "test": "shx echo \"Error: no test specified\" && exit 1",
+    "fresh": "shx rm -rf out export dist node_modules package-lock.json"
+  },
+  "author": "Vladimir Veretennikov",
+  "license": "MIT",
+  "dependencies": {
+    "clix-logger": "git+https://github.com/goldenreign/clix-logger.git"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "browserify": "*",
+    "shx": "*",
+    "tslint": "*",
+    "typescript": "*"
+  }
+}
