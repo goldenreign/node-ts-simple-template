@@ -27,13 +27,13 @@ Scripts:
 
 `npm run dev` - compile and run project
 
+`npm run build` - compile app to `out` folder
+
+`npm start` - used to run compiled app
+
 `npm run export` - export compiled app along with package.json to `export` folder
 
-`npm start` - used to run exported app
-
 `npm run bundle` - compile and bundle app to single file to `dist` folder
-
-`npm run build` - compile app to `out` folder
 
 `npm run clean` - clean `out` folder
 
